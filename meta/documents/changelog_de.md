@@ -3,4 +3,4 @@
 ## v1.0.0 (2018-09-XX)
 
 ### Funktionen
-- Google Maps über Shop Builder einbinden
+- Ermöglicht das Einbinden von Google Maps über den Shop Builder.
