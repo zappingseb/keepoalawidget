@@ -1,0 +1,31 @@
+[
+    {
+        "identifier": "GoogleMapsWidget::MapsWidget",
+        "label": "TEST",
+        "previewImageURL": "https://png.icons8.com/color/1600/google-maps.png",
+        "type": "default",
+        "position": 0,
+        "allowedNestingTypes": ["default", "structure"],
+        "widgetClass": "GoogleMapsWidget\\Widgets\\MapsWidget",
+        "settings": {
+            "apiKey": {
+                "type": "text",
+                "required": true,
+                "defaultValue": "",
+                "options": {
+                    "name": "Address",
+                    "tooltip": "Tooltip"
+                }
+            },
+            "address": {
+                "type": "text",
+                "required": true,
+                "defaultValue": "",
+                "options": {
+                    "name": "Address",
+                    "tooltip": "Tooltip"
+                }
+            }
+        }
+    }
+]
