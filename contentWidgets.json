@@ -1,7 +1,7 @@
 [
     {
         "identifier": "GoogleMapsWidget::MapsWidget",
-        "label": "TEST",
+        "label": "Widget.mapsLabel",
         "previewImageURL": "https://png.icons8.com/color/1600/google-maps.png",
         "type": "default",
         "position": 0,
@@ -13,8 +13,8 @@
                 "required": true,
                 "defaultValue": "",
                 "options": {
-                    "name": "Address",
-                    "tooltip": "Tooltip"
+                    "name": "Widget.mapsApiKeyLabel",
+                    "tooltip": "Widget.mapsApiKeyTooltip"
                 }
             },
             "address": {
@@ -22,8 +22,8 @@
                 "required": true,
                 "defaultValue": "",
                 "options": {
-                    "name": "Address",
-                    "tooltip": "Tooltip"
+                    "name": "Widget.mapsAddressLabel",
+                    "tooltip": "Widget.mapsAddressTooltip"
                 }
             }
         }
