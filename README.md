@@ -2,7 +2,7 @@
 
 # Google Maps Widget
 
-This is the **Google Maps Widget** plugin developed by plentymarkets.
+This is the **Google Maps Widget** plugin for the Shop Builder developed by plentymarkets.
 
 ## Requirements
 
@@ -10,7 +10,15 @@ This is a plugin for [plentymarkets 7](https://www.plentymarkets.com). The [IO](
 
 ## Installing
 
-For detailed information about plugin provisioning refer to [plentymarkets developers](https://developers.plentymarkets.com/dev-doc/basics#plugin-provisioning).
+For detailed information about plugin deployment refer to [plentymarkets developers](https://developers.plentymarkets.com/dev-doc/basics#plugin-provisioning).
+
+## Join our community
+
+Sign up today and become a member of our [forum](https://forum.plentymarkets.com/c/plugin-entwicklung). Discuss the latest trends in plugin development and share your ideas with our community.
+
+## Versioning
+
+Find information about the latest updates in our [Changelog](/meta/documents/changelog_en.md).
 
 ## License
 
