@@ -1,7 +1,7 @@
 require("babel-polyfill")
 
 const JS_SRC = "./resources/js/"
-const DIST = "./resources/dist/"
+const DIST = "./resources/js/dist/"
 const OUTPUT_PREFIX = "maps"
 const SCSS_SRC = "./resources/scss"
 
