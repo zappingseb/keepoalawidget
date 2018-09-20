@@ -3,21 +3,21 @@
     "version": "1.0.0",
     "name": "GoogleMapsWidget",
     "marketplaceName": { "de": "Google Maps Widget", "en": "Google Maps Widget" },
-    "description": "This is the Google Maps Widget plugin for the Shop Builder developed by plentymarkets.",
+    "description": "This is the Google Maps Widget for the Shop Builder developed by plentymarkets.",
     "author": "plentymarkets GmbH",
     "license": "AGPL-3.0",
     "pluginIcon": "icon_plugin_xs.png",
     "price": 0.0,
     "shortDescription": {
-        "de": "Das von plentymarkets entwickelte Google Maps Widget Plugin für den Shop Builder.",
-        "en": "This is the Google Maps Widget plugin for the Shop Builder developed by plentymarkets."
+        "de": "Das von plentymarkets entwickelte Google Maps Widget für den Shop Builder.",
+        "en": "This is the Google Maps Widget for the Shop Builder developed by plentymarkets."
     },
     "authorIcon": "icon_author_xs.png",
     "email": "sales@plentymarkets.com",
     "phone": "+49 561 98 681 100",
-    "categories": ["3517"],
-    "keywords": ["plentymarkets", "plugins", "layout", "template", "google", "maps"],
-    "type": "template",
+    "categories": ["3527"],
+    "keywords": ["plentymarkets", "plugins", "layout", "widget", "google", "maps", "shopbuilder", "shop builder"],
+    "type": "widget",
     "require": ["IO"],
     "namespace": "GoogleMapsWidget"
 }
