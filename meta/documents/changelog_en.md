@@ -1,4 +1,4 @@
-# Release Notes for Ceres
+# Release Notes for Google Maps Widget
 
 ## v1.0.0 (2018-09-XX)
 
