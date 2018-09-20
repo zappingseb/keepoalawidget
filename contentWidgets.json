@@ -25,6 +25,15 @@
                     "name": "Widget.mapsAddressLabel",
                     "tooltip": "Widget.mapsAddressTooltip"
                 }
+            },
+            "zoom": {
+                "type": "number",
+                "required": false,
+                "defaultValue": 16,
+                "options": {
+                    "name": "Widget.mapsAddressLabel",
+                    "tooltip": "Widget.mapsAddressTooltip"
+                }
             }
         }
     }
