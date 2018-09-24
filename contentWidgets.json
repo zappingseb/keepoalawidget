@@ -4,7 +4,7 @@
         "label": "Widget.mapsLabel",
         "previewImageURL": "/images/google-maps-widget.svg",
         "type": "default",
-        "position": 0,
+        "position": 1050,
         "allowedNestingTypes": ["default", "structure"],
         "widgetClass": "GoogleMapsWidget\\Widgets\\MapsWidget",
         "settings": {
