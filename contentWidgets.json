@@ -2,7 +2,7 @@
     {
         "identifier": "GoogleMapsWidget::MapsWidget",
         "label": "Widget.mapsLabel",
-        "previewImageURL": "https://png.icons8.com/color/1600/google-maps.png",
+        "previewImageURL": "/images/google-maps-widget.svg",
         "type": "default",
         "position": 0,
         "allowedNestingTypes": ["default", "structure"],
