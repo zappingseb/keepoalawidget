@@ -5,7 +5,6 @@
         "previewImageURL": "/images/google-maps-widget.svg",
         "type": "default",
         "position": 1050,
-        "allowedNestingTypes": ["default", "structure"],
         "widgetClass": "GoogleMapsWidget\\Widgets\\MapsWidget",
         "settings": {
             "apiKey": {
