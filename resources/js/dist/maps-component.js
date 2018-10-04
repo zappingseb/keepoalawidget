@@ -55,8 +55,6 @@ Vue.component("google-maps-widget", {
             if (!document.querySelector("#google-maps-api")) {
                 _this.createScript().then(function () {
                     return _this.initializeMap();
-                }, function (error) {
-                    debugger;
                 });
             } else {
                 _this.listenToExistingScript();
