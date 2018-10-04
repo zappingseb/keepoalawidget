@@ -63,10 +63,7 @@ Vue.component("google-maps-widget",
         {
             if (!document.querySelector("#google-maps-api"))
             {
-                this.createScript().then(() => this.initializeMap(),
-                    error => {
-                        debugger
-                    })
+                this.createScript().then(() => this.initializeMap())
             }
             else
             {
