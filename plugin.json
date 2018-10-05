@@ -17,7 +17,7 @@
     "phone": "+49 561 98 681 100",
     "categories": ["3527"],
     "keywords": ["plentymarkets", "plugins", "layout", "widget", "google", "maps", "shopbuilder", "shop builder"],
-    "type": "widget",
+    "type": "widgets",
     "require": ["IO"],
     "namespace": "GoogleMapsWidget"
 }
