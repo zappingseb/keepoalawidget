@@ -10,7 +10,7 @@ This is a plugin for [plentymarkets 7](https://www.plentymarkets.com). The [IO](
 
 ## Installing
 
-For detailed information about plugin deployment refer to [plentymarkets developers](https://developers.plentymarkets.com/dev-doc/basics#plugin-provisioning).
+For detailed information about widget deployment refer to the [plentymarkets developers](https://developers.plentymarkets.com/tutorials/my-first-shop-builder-widget) documentation.
 
 ## Join our community
 
