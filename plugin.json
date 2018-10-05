@@ -18,6 +18,6 @@
     "categories": ["3527"],
     "keywords": ["plentymarkets", "plugins", "layout", "widget", "google", "maps", "shopbuilder", "shop builder"],
     "type": "widgets",
-    "require": ["IO"],
+    "require": ["Ceres", "IO"],
     "namespace": "GoogleMapsWidget"
 }
