@@ -10,7 +10,11 @@ This is a plugin for [plentymarkets 7](https://www.plentymarkets.com). The [IO](
 
 ## Installing
 
-For detailed information about widget deployment refer to the [plentymarkets developers](https://developers.plentymarkets.com/tutorials/my-first-shop-builder-widget) documentation.
+For detailed information about widget deployment refer to the [plentymarkets developers](https://developers.plentymarkets.com/dev-doc/basics) documentation.
+
+## Documentation
+
+For a detailed documentation of ShopBuilder widgets and the Google Maps widget, please refer to the [plentymarkets developers widget](https://developers.plentymarkets.com/tutorials/my-first-shop-builder-widget) documentation.
 
 ## Join our community
 
