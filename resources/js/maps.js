@@ -1,3 +1,5 @@
+import "../scss/maps.scss";
+
 Vue.component("google-maps-widget",
 {
     template: `<div :class="aspectRatio" class="maps-component" ref="googleMapsContainer"></div>`,
