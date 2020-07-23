@@ -1,6 +1,6 @@
 <?php
  
-namespace GoogleMapsWidget\Providers;
+namespace KeepoalaWidget\Providers;
  
 use IO\Helper\TemplateContainer;
 use IO\Helper\ResourceContainer;
@@ -19,7 +19,7 @@ class MapsServiceProvider extends ServiceProvider
     {
         $eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container)
         {
-            $container->addScriptTemplate('GoogleMapsWidget::Content.Scripts');
+            $container->addScriptTemplate('KeepoalaWidget::Content.Scripts');
         }, 0);
     }
 }

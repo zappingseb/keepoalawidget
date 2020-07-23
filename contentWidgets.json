@@ -1,39 +1,12 @@
 [
     {
-        "identifier": "GoogleMapsWidget::MapsWidget",
+        "identifier": "KeepoalaWidget::KeepoalaWidget",
         "label": "Widget.mapsLabel",
-        "previewImageURL": "/images/google-maps-widget.svg",
+        "previewImageURL": "/images/keepoala-widget.svg",
         "type": "default",
         "position": 1050,
-        "widgetClass": "GoogleMapsWidget\\Widgets\\MapsWidget",
+        "widgetClass": "KeepoalaWidget\\Widgets\\KeepoalaWidget",
         "settings": {
-            "apiKey": {
-                "type": "text",
-                "required": true,
-                "defaultValue": "",
-                "options": {
-                    "name": "Widget.mapsApiKeyLabel",
-                    "tooltip": "Widget.mapsApiKeyTooltip"
-                }
-            },
-            "address": {
-                "type": "textarea",
-                "required": true,
-                "defaultValue": "",
-                "options": {
-                    "name": "Widget.mapsAddressLabel",
-                    "tooltip": "Widget.mapsAddressTooltip"
-                }
-            },
-            "zoom": {
-                "type": "number",
-                "required": false,
-                "defaultValue": 16,
-                "options": {
-                    "name": "Widget.mapsZoomLabel",
-                    "tooltip": "Widget.mapsZoomTooltip"
-                }
-            }
         }
     }
 ]
