@@ -24,4 +24,17 @@ class KeepoalaWidget extends BaseWidget
             'showAdditionalPaymentInformation' => true
         ];
     }
+    
+    protected function getPreviewData($widgetSettings)
+    {
+        /** @var OrderResultFactory $orderResultFactory */
+        $orderResultFactory = pluginApp(OrderResultFactory::class);
+        $order = $orderResultFactory->fillOrderResult();
+
+        return [
+            'data' => $order,
+            'totals' => $order['totals'],
+            'showAdditionalPaymentInformation' => true
+        ];
+    }
 }
