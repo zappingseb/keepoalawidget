@@ -7,10 +7,12 @@ use IO\Services\Order\Factories\OrderResultFactory;
 
 class KeepoalaWidget extends BaseWidget
 {
+    protected $template = "KeepoalaWidget::Widgets.KeepoalaWidget";
+
     /**
      * @inheritdoc
      */
-    protected function getPreviewData($widgetSettings)
+    protected function getTemplateData($widgetSettings, $isPreview)
     {
         /** @var OrderResultFactory $orderResultFactory */
         $orderResultFactory = pluginApp(OrderResultFactory::class);
