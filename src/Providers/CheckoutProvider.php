@@ -8,7 +8,7 @@ use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
  
-class MapsServiceProvider extends ServiceProvider
+class CheckoutProvider extends ServiceProvider
 {
 	public function register()
 	{
@@ -19,7 +19,7 @@ class MapsServiceProvider extends ServiceProvider
     {
         $eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container)
         {
-            $container->addScriptTemplate('KeepoalaWidget::Content.Scripts');
+            $container;
         }, 0);
     }
 }
