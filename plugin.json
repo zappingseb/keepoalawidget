@@ -19,5 +19,5 @@
     "keywords": ["plentymarkets", "plugins", "layout", "widget", "shopbuilder", "shop builder"],
     "type": "widgets",
     "require": ["Ceres", "IO"],
-    "namespace": "GoogleMapsWidget"
+    "namespace": "KeepoalaWidget"
 }
