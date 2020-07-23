@@ -1,7 +1,7 @@
 [
     {
         "identifier": "KeepoalaWidget::KeepoalaWidget",
-        "label": "Keepoala Confirmation Link",
+        "label": "Widgets.mapsLabel",
         "previewImageURL": "/images/keepoala-widget.svg",
         "type": "default",
         "position": 1050,
