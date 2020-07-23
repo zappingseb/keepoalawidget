@@ -1,14 +1,7 @@
-{% import "Ceres::Widgets.Helper.TwigBuilder" as Twig %}
-{% import "Ceres::Widgets.Helper.WidgetHelper" as WidgetHelper %}
-
-{{ Twig.import("LayoutContainer", "Ceres::PageDesign.Macros.LayoutContainer") }}
-{{ Twig.component("Ceres::Customer.Components.AddressSelect.AddressHeader") }}
-{{ Twig.component("Ceres::MyAccount.Components.ChangePaymentMethod") }}
-
-{{ Twig.if("data.order is defined and data.order is not null") }}
+{% if data is not empty %}
 <div class="widget-inner">
     <div class="h3">
-        {{ Twig.trans("Ceres::Template.orderConfirmationOrderId") }} {{ Twig.print("data.order.id") }}
+        {{ data.order.id }}
     </div>
 </div>
-{{ Twig.endif() }}
+{% endif %}
