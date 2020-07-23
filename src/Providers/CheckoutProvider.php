@@ -19,7 +19,7 @@ class CheckoutProvider extends ServiceProvider
     {
         $eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container)
         {
-            $container;
+            $container->addScriptTemplate('GoogleMapsWidget::Content.Scripts');
         }, 0);
     }
 }
