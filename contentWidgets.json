@@ -1,11 +1,11 @@
 [
     {
-        "identifier": "KeepoalaWidget::KeepoalaWidget",
+        "identifier": "KeepoalaWidget2::KeepoalaWidget2",
         "label": "Widget.mapsLabel",
         "previewImageURL": "/images/keepoala-widget.svg",
         "type": "default",
         "position": 1050,
-        "widgetClass": "KeepoalaWidget\\Widgets\\KeepoalaWidget",
+        "widgetClass": "KeepoalaWidget2\\Widgets\\KeepoalaWidget2",
         "settings": {
         }
     }

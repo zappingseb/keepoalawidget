@@ -1,6 +1,6 @@
 <?php
  
-namespace KeepoalaWidget\Providers;
+namespace KeepoalaWidget2\Providers;
  
 use IO\Helper\TemplateContainer;
 use IO\Helper\ResourceContainer;
@@ -19,7 +19,7 @@ class CheckoutProvider extends ServiceProvider
     {
         $eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container)
         {
-            $container->addScriptTemplate('KeepoalaWidget::Content.Scripts');
+            $container->addScriptTemplate('KeepoalaWidget2::Content.Scripts');
         }, 0);
     }
 }

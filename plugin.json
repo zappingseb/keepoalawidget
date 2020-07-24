@@ -1,7 +1,7 @@
 {
-    "serviceProvider": "KeepoalaWidget\\Providers\\CheckoutProvider",
+    "serviceProvider": "KeepoalaWidget2\\Providers\\CheckoutProvider",
     "version": "1.0.0",
-    "name": "KeepoalaWidget",
+    "name": "KeepoalaWidget2",
     "marketplaceName": { "de": "Keepoala Widget", "en": "Keepoala Widget" },
     "description": "This Widget allows integration of Keepoala into your Confirmation Page.",
     "author": "Sebastian Engel-Wolf",
@@ -19,5 +19,5 @@
     "keywords": ["plentymarkets", "plugins", "layout", "widget", "shopbuilder", "shop builder"],
     "type": "widgets",
     "require": ["Ceres", "IO"],
-    "namespace": "KeepoalaWidget"
+    "namespace": "KeepoalaWidget2"
 }
