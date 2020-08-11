@@ -3,7 +3,9 @@
     <div class="h3">
         {{ data.order.id }}
     </div>
-    <div>{{ keepoalaID }}</div>
-    <img src="{{ plugin_path("KeepoalaWidget2") }}/images/drawing.svg" width="200px">
+    <div><a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">Punkte sammeln</a></div>
+    <a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">
+    	<img src="{{ plugin_path("KeepoalaWidget2") }}/images/drawing.svg" width="200px">
+    </a>
 </div>
 {% endif %}

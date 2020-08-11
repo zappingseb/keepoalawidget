@@ -8,5 +8,24 @@
         "widgetClass": "KeepoalaWidget2\\Widgets\\KeepoalaWidget2",
         "settings": {
         }
+    },
+    {
+        "identifier": "KeepoalaWidget2::KeepoalaWidgetWarenkorb",
+        "label": "Widget.warenkorbLabel",
+        "previewImageURL": "/images/keepoala-widget-warenkorb.svg",
+        "type": "default",
+        "position": 1050,
+        "widgetClass": "KeepoalaWidget2\\Widgets\\KeepoalaWidgetWarenkorb",
+        "settings": {
+                "linktext": {
+                  "type": "text",
+                  "required": true,
+                  "defaultValue": "Behalte alle Artikel in diesem Einkauf (keine Retoure)",
+                  "options": {
+                      "name": "Widget.mapsLinkTextLabel",
+                      "tooltip": "Widget.mapsLinkTextTooltip"
+                  }
+              }
+        }
     }
 ]
