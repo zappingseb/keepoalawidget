@@ -2,111 +2,18 @@
   "formatVersion": 1,
   "menu": {
      "Config.global": {
-        "label": "Config.global",
+        "label": "Config.globalsettings",
         "fullWidth": true,
         "formFields": {
-           "global.headerLogo": {
-              "type": "inputFile",
+           "global.qrorder": {
+              "type": "checkBox",
               "required": true,
-              "label": "Config.globalHeaderLogoLabel",
+              "label": "Config.qrorder",
               "options": {
-                 "tooltip": "Config.globalHeaderLogoTooltip",
-                 "defaultValue": ""
-              }
-           },
-           "global.category": {
-              "type": "categoryPicker",
-              "required": true,
-              "label": "Config.globalCategoryLabel",
-              "options": {
-                 "tooltip": "Config.globalCategoryTooltip",
-                 "defaultValue": ""
-              }
-           },
-           "global.container": {
-              "type": "verticalContainer",
-              "label": "Config.globalContainerLabel",
-              "options": {
-                 "containerEntries":
-                 {
-                    "global.container.apiKey": {
-                       "type": "inputText",
-                       "label": "Config.globalContainerApiKeyLabel",
-                       "required": false
-                    }
-                 }
+                "defaultValue": true
               }
            }
         }
      },
-     "additional": {
-        "label": "Config.additionalSettings",
-        "menu": {
-           "languages": {
-              "label": "Config.additionalSettingsLanguagesLabel",
-              "formFields": {
-                 "additional.languages.supportedLanguages": {
-                    "type": "multiCheckBox",
-                    "required": false,
-                    "label": "Config.additionalSettingsSupportedLanguagesLabel",
-                    "options": {
-                       "tooltip": "Config.additionalSettingsSupportedLanguagesTooltip",
-                       "defaultValue": "de, en",
-                       "checkBoxValues": [
-                          {
-                             "value": "de",
-                             "caption":"Config.languageGerman"
-                          },
-                          {
-                             "value": "en",
-                             "caption": "Config.languageEnglish"
-                          },
-                          {
-                             "value": "fr",
-                             "caption": "Config.languageFrench"
-                          },
-                          {
-                             "value": "es",
-                             "caption": "Config.languageSpanish"
-                          }
-                       ]
-                    }
-                 }
-              }
-           },
-           "moreSettings": {
-              "label": "Config.additionalSettingsMoreLabel",
-              "formFields": {
-                 "additional.more.fulfillmentClient": {
-                    "type": "selectBox",
-                    "required": false,
-                    "label": "Config.additionalSettingsMoreFulfillmentClientLabel",
-                    "options": {
-                       "tooltip": "Config.additionalSettingsMoreFulfillmentClientTooltip",
-                       "defaultValue": "dhl",
-                       "selectBoxValues": [
-                          {
-                             "value": "dhl",
-                             "caption": "Config.fulfillmentDHL"
-                          },
-                          {
-                             "value": "ups",
-                             "caption": "Config.fulfillmentUPS"
-                          },
-                          {
-                             "value": "hermes",
-                             "caption": "Config.fulfillmentHermes"
-                          },
-                          {
-                             "value": "dpd",
-                             "caption": "Config.fulfillmentDPD"
-                          }
-                       ]
-                    }
-                 }
-              }
-           }
-        }
-     }
   }
 }
