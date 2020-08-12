@@ -1,27 +1,39 @@
 {% if data is not empty %}
-	<div class="widget-outer" style="
-    display:flex;
-    justify-content: center;
-    align-content:center;
-	  background-image:url('{{ plugin_path("KeepoalaWidget2") }}/images/DSC08320-scaled.jpg');
-	  background-size: cover;
-	  background-repeat: no-repeat;
-	  background-position: center;
-    width:100%">
-		<div class="widget-inner" style="height: 100%;
-	  display: table-cell;">
-	  	<div style="background: #ffffff;
-	box-shadow: 0px 6px 20px rgba(100,100,100,0.5);
-	    margin: 2em;
-	    padding: 15px;text-align:center;">
-		    <a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">
-		    	<img src="{{ plugin_path("KeepoalaWidget2") }}/images/drawing.svg" width="120px" style="
-		    	   float:left;
-		    	   padding:12px;
-
-		    	   ">
-		    </a>
-		    <div><a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">Jetzt Keepoala Punkte sammeln</a></div>
+<div class="widget-outer" style="
+  display: flex;
+  place-content: center;
+  background-image: url('{{ plugin_path("KeepoalaWidget2") }}/images/DSC08320-scaled.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;">
+		<div class="widget-inner" style="
+		height: 100%;
+		display:flex;
+		align-content: center;
+		align-items: center;
+		align-self: center;">
+			<div style="
+			background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+			box-shadow: rgba(100, 100, 100, 0.5) 0px 6px 20px;
+			margin: 2em;
+			padding: 15px;
+			text-align: left;
+			display: flex;
+			align-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;">
+				<div>
+					<a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}" style="height: 120px;"><img src="{{ plugin_path("KeepoalaWidget2") }}/images/drawing.svg" style="/*! float: left; */ padding: 12px;height: 120px;" width="120px"></a>
+				</div>
+ 				<div style="min-width: 16em;">
+ 					<a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">Jetzt Keepoala Punkte sammeln</a>
+ 				</div>
+ 				<div style="color: rgb(108, 108, 108)">
+		    	Wenn du von dieser Sendung nichts zurück schickst, erhälst du Keepoala Punkte. Diese kannst du
+		    	gegen Gutscheine deiner Lieblingsshops oder für nachhaltiges Engagement einsetzen. Mit Keepoala kannst du der Umwelt helfen und dich gleichzeitig belohnen.
+		    	</div>
 		</div>
 	</div>
 </div>
