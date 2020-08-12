@@ -11,8 +11,8 @@ use Plenty\Modules\Order\Pdf\Events\OrderPdfGenerationEvent;
 use Plenty\Modules\Order\Pdf\Models\OrderPdfGeneration;
 use Plenty\Modules\Document\Models\Document;
 use KeepoalaWidget2\Services\Logger;
-use KeepoalaWidget2\Services\Config;
 use Ceres\Config\CeresHeaderConfig;
+use Plenty\Plugin\ConfigRepository;
 
 class CheckoutProvider extends ServiceProvider
 {
@@ -25,7 +25,7 @@ class CheckoutProvider extends ServiceProvider
  
 	}
  
-	public function boot(Twig $twig, Dispatcher $eventDispatcher, Logger $logger, Config $config)
+	public function boot(Twig $twig, Dispatcher $eventDispatcher, Logger $logger, ConfigRepository $config)
     {
         $eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container)
         {
@@ -38,10 +38,10 @@ class CheckoutProvider extends ServiceProvider
     private function registerInvoicePdfGeneration(
         Dispatcher $eventDispatcher,
         Logger $logger,
-        Config $config
+        ConfigRepository $config
     ) {
 
-        if ($config->get("global.qrorder")) {
+        if ($config->get("KeepoalaWidget2" . '.' . "global.qrorder") == "1") {
             // Listen for the document generation event
             $eventDispatcher->listen(OrderPdfGenerationEvent::class,
                 function (OrderPdfGenerationEvent $event) use ($logger) {
@@ -67,7 +67,7 @@ class CheckoutProvider extends ServiceProvider
 
                             $orderPdfGenerationModelAdvice = pluginApp(OrderPdfGeneration::class);
                             $orderPdfGenerationModelAdvice->language = "de";
-                            $orderPdfGenerationModelAdvice->advice = "TestText";
+                            $orderPdfGenerationModelAdvice->advice = "Schicke bei dieser Sendung nichts zurück und erhalte Keepoala Punkte auf: " . $link;
 
                         } catch (\Exception $e) {
                             $message = "KeepoalaWidget2" . '::' . 'Adding PDF comment failed for order '
