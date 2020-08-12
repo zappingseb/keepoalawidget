@@ -10,16 +10,19 @@ use Plenty\Plugin\ConfigRepository;
 class KeepoalaWidget2 extends BaseWidget
 {
     protected $template = "KeepoalaWidget2::Widgets.KeepoalaWidget2";
+    private $config;
+
 
     /**
      * @inheritdoc
      */
-    protected function getTemplateData($widgetSettings, $isPreview, ConfigRepository $config)
+    protected function getTemplateData($widgetSettings, $isPreview)
     {
         /** @var OrderResultFactory $orderResultFactory */
         $orderResultFactory = pluginApp(OrderResultFactory::class);
         $order = $orderResultFactory->fillOrderResult();
 
+        $config = pluginApp(ConfigRepository::class);
         $company_name = $config->get("KeepoalaWidget2.companycode");
 
         $keepoalaID = $company_name . '-' .  md5($order->id);
@@ -33,8 +36,9 @@ class KeepoalaWidget2 extends BaseWidget
         ];
     }
     
-    protected function getPreviewData($widgetSettings, ConfigRepository $config)
+    protected function getPreviewData($widgetSettings)
     {
+        $config = pluginApp(ConfigRepository::class);
         $company_name = $config->get("KeepoalaWidget2.companycode");
 
         /** @var OrderResultFactory $orderResultFactory */

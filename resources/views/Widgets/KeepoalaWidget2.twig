@@ -1,11 +1,28 @@
 {% if data is not empty %}
-<div class="widget-inner">
-    <div class="h3">
-        {{ data.order.id }}
-    </div>
-    <div><a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">Punkte sammeln</a></div>
-    <a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">
-    	<img src="{{ plugin_path("KeepoalaWidget2") }}/images/drawing.svg" width="200px">
-    </a>
+	<div class="widget-outer" style="
+    display:flex;
+    justify-content: center;
+    align-content:center;
+	  background-image:url('{{ plugin_path("KeepoalaWidget2") }}/images/DSC08320-scaled.jpg');
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: center;
+    width:100%">
+		<div class="widget-inner" style="height: 100%;
+	  display: table-cell;">
+	  	<div style="background: #ffffff;
+	box-shadow: 0px 6px 20px rgba(100,100,100,0.5);
+	    margin: 2em;
+	    padding: 15px;text-align:center;">
+		    <a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">
+		    	<img src="{{ plugin_path("KeepoalaWidget2") }}/images/drawing.svg" width="120px" style="
+		    	   float:left;
+		    	   padding:12px;
+
+		    	   ">
+		    </a>
+		    <div><a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">Jetzt Keepoala Punkte sammeln</a></div>
+		</div>
+	</div>
 </div>
 {% endif %}

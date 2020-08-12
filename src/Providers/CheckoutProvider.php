@@ -45,7 +45,7 @@ class CheckoutProvider extends ServiceProvider
         if ($config->get("KeepoalaWidget2.qrorder") == "1") {
             // Listen for the document generation event
             $eventDispatcher->listen(OrderPdfGenerationEvent::class,
-                function (OrderPdfGenerationEvent $event) use ($logger) {
+                function (OrderPdfGenerationEvent $event) use ($logger, $config) {
 
                     /** @var Order $order */
                     $order = $event->getOrder();
@@ -68,7 +68,7 @@ class CheckoutProvider extends ServiceProvider
 
                             $orderPdfGenerationModelAdvice = pluginApp(OrderPdfGeneration::class);
                             $orderPdfGenerationModelAdvice->language = "de";
-                            $orderPdfGenerationModelAdvice->advice = "Schicke bei dieser Sendung nichts zurück und erhalte Keepoala Punkte auf: " . $link . ". Oder scanne den QRCode." ;
+                            $orderPdfGenerationModelAdvice->advice = "Schicke bei dieser Sendung nichts zurück und erhalte Keepoala Punkte auf: " . PHP_EOL . $link . PHP_EOL . " oder scanne einfach den QRCode." ;
 
                         } catch (\Exception $e) {
                             $message = "KeepoalaWidget2" . '::' . 'Adding PDF comment failed for order '
