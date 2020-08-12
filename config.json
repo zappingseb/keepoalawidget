@@ -5,7 +5,15 @@
         "label": "Config.globalsettings",
         "fullWidth": true,
         "formFields": {
-           "global.qrorder": {
+           "companycode": {
+              "type": "inputText",
+              "label": "Keepoala Company Code",
+              "required": true,
+              "options": {
+                "defaultValue": "7faf"
+              }
+           },
+           "qrorder": {
               "type": "checkBox",
               "required": true,
               "label": "Config.qrorder",
@@ -14,6 +22,6 @@
               }
            }
         }
-     },
+     }
   }
 }

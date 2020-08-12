@@ -5,6 +5,7 @@ namespace KeepoalaWidget2\Widgets;
 use Ceres\Widgets\Helper\BaseWidget;
 use IO\Services\Order\Factories\OrderResultFactory;
 use Ceres\Config\CeresHeaderConfig;
+use Plenty\Plugin\ConfigRepository;
 
 class KeepoalaWidget2 extends BaseWidget
 {
@@ -13,16 +14,15 @@ class KeepoalaWidget2 extends BaseWidget
     /**
      * @inheritdoc
      */
-    protected function getTemplateData($widgetSettings, $isPreview)
+    protected function getTemplateData($widgetSettings, $isPreview, ConfigRepository $config)
     {
         /** @var OrderResultFactory $orderResultFactory */
         $orderResultFactory = pluginApp(OrderResultFactory::class);
         $order = $orderResultFactory->fillOrderResult();
 
-        $shop_config = pluginApp(CeresHeaderConfig::class);
-        $company_name = $shop_config->companyName;
+        $company_name = $config->get("KeepoalaWidget2.companycode");
 
-        $keepoalaID = substr(md5($company_name), 0, 4) . '-' .  md5($order->id);
+        $keepoalaID = $company_name . '-' .  md5($order->id);
 
         return [
             'data' => $order,
@@ -33,16 +33,15 @@ class KeepoalaWidget2 extends BaseWidget
         ];
     }
     
-    protected function getPreviewData($widgetSettings)
+    protected function getPreviewData($widgetSettings, ConfigRepository $config)
     {
-        $shop_config = pluginApp(CeresHeaderConfig::class);
-        $company_name = $shop_config->companyName;
+        $company_name = $config->get("KeepoalaWidget2.companycode");
 
         /** @var OrderResultFactory $orderResultFactory */
         $orderResultFactory = pluginApp(OrderResultFactory::class);
         $order = $orderResultFactory->fillOrderResult();
 
-        $keepoalaID = substr(md5($company_name), 0, 4) . '-' . md5($order->id);
+        $keepoalaID = $company_name . '-' . md5($order->id);
         return [
             'data' => $order,
             'totals' => $order['totals'],

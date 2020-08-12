@@ -41,7 +41,8 @@ class CheckoutProvider extends ServiceProvider
         ConfigRepository $config
     ) {
 
-        if ($config->get("KeepoalaWidget2" . '.' . "global.qrorder") == "1") {
+        $logger->info("KeepoalaWidget2.qrorder = ".$config->get("KeepoalaWidget2.qrorder"));
+        if ($config->get("KeepoalaWidget2.qrorder") == "1") {
             // Listen for the document generation event
             $eventDispatcher->listen(OrderPdfGenerationEvent::class,
                 function (OrderPdfGenerationEvent $event) use ($logger) {
@@ -53,7 +54,7 @@ class CheckoutProvider extends ServiceProvider
                     $shop_config = pluginApp(CeresHeaderConfig::class);
                     $company_name = $shop_config->companyName;
 
-                    $keepoalaID = substr(md5($company_name), 0, 4) . '-' .  md5($order->id);
+                    $keepoalaID = $config->get("KeepoalaWidget2.companycode") . '-' .  md5($order->id);
                     $link = "https://www.keepoala.com/enter-code/?code=" . $keepoalaID;
                     if ($docType == Document::ORDER_CONFIRMATION) {
 
@@ -67,7 +68,7 @@ class CheckoutProvider extends ServiceProvider
 
                             $orderPdfGenerationModelAdvice = pluginApp(OrderPdfGeneration::class);
                             $orderPdfGenerationModelAdvice->language = "de";
-                            $orderPdfGenerationModelAdvice->advice = "Schicke bei dieser Sendung nichts zurück und erhalte Keepoala Punkte auf: " . $link;
+                            $orderPdfGenerationModelAdvice->advice = "Schicke bei dieser Sendung nichts zurück und erhalte Keepoala Punkte auf: " . $link . ". Oder scanne den QRCode." ;
 
                         } catch (\Exception $e) {
                             $message = "KeepoalaWidget2" . '::' . 'Adding PDF comment failed for order '

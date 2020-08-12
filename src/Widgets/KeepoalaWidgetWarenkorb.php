@@ -20,7 +20,7 @@ class KeepoalaWidgetWarenkorb extends BaseWidget
         $order = $orderResultFactory->fillOrderResult();
 
         $shop_config = pluginApp(CeresHeaderConfig::class);
-        $company_name = $shop_config->companyName;
+        $company_name = $config->get("KeepoalaWidget2.companycode")
 
         $keepoalaID = substr(md5($company_name), 0, 4) . '-' .  md5($order->id);
 
