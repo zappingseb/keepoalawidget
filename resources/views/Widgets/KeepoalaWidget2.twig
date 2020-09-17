@@ -25,10 +25,14 @@
 			flex-wrap: wrap;
 			justify-content: center;">
 				<div>
-					<a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}" style="height: 120px;"><img src="{{ plugin_path("KeepoalaWidget2") }}/images/drawing.svg" style="/*! float: left; */ padding: 12px;height: 120px;" width="120px"></a>
+					<a target="_new" href="http://localhost/enter-code/?code={{ keepoalaID }}" style="height: 120px;"><img src="{{ plugin_path("KeepoalaWidget2") }}/images/drawing.svg" style="/*! float: left; */ padding: 12px;height: 120px;" width="120px"></a>
+				</div>
+				<div>
+					<a target="_new" href="http://localhost/enter-code/?code={{ keepoalaID }}" style="height: 120px;">
+					<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://localhost/enter-code/?code={{ keepoalaID }}" style="/*! float: left; */ padding: 12px;height: 120px;" width="120px"></a>
 				</div>
  				<div style="min-width: 16em; margin-left:1em;">
- 					<a href="http://192.168.2.66/enter-code/?code={{ keepoalaID }}">Jetzt Keepoala Punkte sammeln</a>
+ 					<a target="_new" href="http://localhost/enter-code/?code={{ keepoalaID }}">Jetzt Keepoala Punkte sammeln</a>
  				</div>
  				<div style="color: rgb(108, 108, 108)">
 		    	Wenn du von dieser Sendung nichts zurück schickst, erhälst du Keepoala Punkte. Diese kannst du

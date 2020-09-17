@@ -55,7 +55,7 @@ class CheckoutProvider extends ServiceProvider
                     $company_name = $shop_config->companyName;
 
                     $keepoalaID = $config->get("KeepoalaWidget2.companycode") . '-' .  md5($order->id);
-                    $link = "https://www.keepoala.com/enter-code/?code=" . $keepoalaID;
+                    $link = "https://localhost/enter-code/?code=" . $keepoalaID;
                     if ($docType == Document::ORDER_CONFIRMATION) {
 
                         try {
