@@ -2,23 +2,148 @@
 <div class="widget-outer" style="
     display:flex;
     justify-content: center;
-	  background-image:url('{{ plugin_path("KeepoalaWidget2") }}/images/DSC08320-scaled.jpg');
+	background-color:transparent;
 	  background-size: cover;
 	  background-repeat: no-repeat;
 	  background-position: center;
+	  padding-top:20px;
     width:100%">
-	<div class="widget-inner" style="
-	  height: 100%;
-	  display: table-cell;
-	  ">
-	   	<div style="background: #ffffff;
-	box-shadow: 0px 6px 20px rgba(100,100,100,0.5);
-	    margin: 2em;
-	    padding: 15px;text-align:center;">
-	    {{widget.settings.linktext.mobile}} und erhalte wertvolle <a target="_new" href="https://www.keepoala.com/#fuer-keeper">Keepoala</a> Punkte.
-   		</div>
-	</div>
+	<div class="keepoala section group page-width" style="width:100%">
+  
+  {% if widget.settings.widgettype.mobile == 'logoexpand' or widget.settings.widgettype.mobile == 'logotext'  %}
+  <div id="keepoala_banner_cart" class="keepoala col span_1_of_4 center">
+    <img alt="Keepoala" data-src="https://plugin.keepoala.com/static_files/assets/Keepoala.svg" src="https://plugin.keepoala.com/static_files/assets/Keepoala.svg" style="/*! max-width: 15%; */filter: ;" class="keepoala logo dark">
+
+  </div>
+  {% endif %}
+<div class="keepoala col span_2_of_4 text">
+  <p class="message">Schütze mit deinem Einkauf die Umwelt und belohne dich dafür. <b>{{shop.name}}</b> nutzt Keepoala zur Vermeidung von Retouren und CO2.</p>  
+</div>
+
+   {% if widget.settings.widgettype.mobile == 'logoexpand' or widget.settings.widgettype.mobile == 'textexpand'  %}
+    <div class="keepoala col span_1_of_4 center">
+      <p class="message"><a id="keepoala-more-button" onclick="keepoala_banner_hide(this)">Erfahre mehr</a></p>
+  {% endif %}
+  </div>
+  <div id="keepoala-banner-expand" style="display:none" class="keepoala col span_4_of_4">
+  	
+  	
+  <p><b>Nachhaltiges reduzieren deiner Retouren</b>
+  </p>
+  <p>Keepoala hat es sich zur Aufgabe gemacht, die Zahl der Retouren und des damit verbundenen CO₂ Fußabdrucks gemeinsam mit dir und allen anderen Online Shopper*innen zu senken: indem ihr eure Bestellungen ganz einfach behaltet und wir euch dafür belohnen. </p>
+  <p>Shoppe weiter wie gewohnt. Um deine erfassten Punkte und mögliche Prämien einzusehen, klicke einfach auf den Keepoala Link auf deiner Bestellbestätigung.</p>
+  <p>Manche Retouren lassen sich einfach nicht vermeiden. Retournierte Einkäufe bedeuten bei uns keine Minuspunkte. Du kannst uns helfen, deine Retoure besser zu verstehen, indem du uns einige Fragen zu deinem Artikel beantwortest und erhältst dafür Keepoala Punkte.</p>
+  <p>Um noch nachhaltiger zu werden und Retouren zu vermeiden, verarbeitet {{shop.name}} die Daten der Kunden mit Keepoala. Details findest du in unserer <a target="_new" href="{{shop.url}}/policies/privacy-policy">Datenschutzbestimmung</a>.</p>
+  </div>
+  
+  
+ </div>
+
 </div>
 <!-- Spacer -->
 <div style="height:20px;width:100%"></div>
+<script2>
+function keepoala_banner_hide(element){
+	var menu = element.parentElement.parentElement.parentElement.querySelector("#keepoala-banner-expand")
+
+	if (menu.style.display == "") {
+          menu.style.display = "none";
+      } else {
+          menu.style.display = "";
+      }
+}
+
+(function(funcName, baseObj) {
+    // The public function name defaults to window.docReady
+    // but you can pass in your own object and own function name and those will be used\
+    // if you want to put them in a different namespace\
+    funcName = funcName || "docReady";
+    baseObj = baseObj || window;
+    var readyList = [];
+    var readyFired = false;
+    var readyEventHandlersInstalled = false;
+    
+    // call this when the document is ready\
+    // this function protects itself against being called more than once\
+    function ready() {
+        if (!readyFired) {
+            // this must be set to true before we start calling callbacks\
+            readyFired = true;
+            for (var i = 0; i < readyList.length; i++) {
+                // if a callback here happens to add new ready handlers,\
+                // the docReady() function will see that it already fired\
+                // and will schedule the callback to run right after\
+                // this event loop finishes so all handlers will still execute\
+                // in order and no new ones will be added to the readyList\
+                // while we are processing the list\
+                readyList[i].fn.call(window, readyList[i].ctx);
+            }
+            // allow any closures held by these functions to free\
+            readyList = [];
+        }
+    }
+    
+    function readyStateChange() {
+        if ( document.readyState === "complete" ) {
+            ready();
+        }
+    }
+    
+    // This is the one public interface\
+    // docReady(fn, context);\
+    // the context argument is optional - if present, it will be passed\
+    // as an argument to the callback\
+    baseObj[funcName] = function(callback, context) {
+        if (typeof callback !== "function") {
+            throw new TypeError("callback for docReady(fn) must be a function");
+        }
+        // if ready has already fired, then just schedule the callback\
+        // to fire asynchronously, but right away\
+        if (readyFired) {
+            setTimeout(function() {callback(context);}, 1);
+            return;
+        } else {
+            // add the function and context to the list\
+            readyList.push({fn: callback, ctx: context});
+        }
+        // if document already ready to go, schedule the ready function to run\
+        if (document.readyState === "complete") {
+            setTimeout(ready, 1);
+        } else if (!readyEventHandlersInstalled) {
+            // otherwise if we dont have event handlers installed, install them\
+            if (document.addEventListener) {
+                // first choice is DOMContentLoaded event\
+                document.addEventListener("DOMContentLoaded", ready, false);
+                // backup is window load event\
+                window.addEventListener("load", ready, false);
+            } else {
+                // must be IE\
+                document.attachEvent("onreadystatechange", readyStateChange);
+                window.attachEvent("onload", ready);
+            }
+            readyEventHandlersInstalled = true;
+        }
+    }
+})("docReady", window);
+
+function insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+console.log("TEST TEST TEST")
+// prevent the function docReady from running multiple times
+localStorage.setItem("ran", false)
+
+docReady(function() {
+
+    // Inject Keepoala CSS if not there
+    if (!document.getElementById('keepoala-css')) {
+        var link = document.createElement('link');
+        link.id = 'keepoala-css';
+        link.rel = 'stylesheet';
+        link.href = '{{ plugin_path("KeepoalaWidget2") }}/css/keepoala.css';
+        document.head.appendChild(link);
+    }
+
+})
+</script2>
 {% endif %}

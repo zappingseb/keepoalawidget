@@ -17,15 +17,38 @@
         "position": 1050,
         "widgetClass": "KeepoalaWidget2\\Widgets\\KeepoalaWidgetWarenkorb",
         "settings": {
-                "linktext": {
-                  "type": "text",
+                "widgettype": {
+                  "type": "select",
                   "required": true,
-                  "defaultValue": "Behalte alle Artikel in diesem Einkauf (keine Retoure)",
+                  "defaultValue": "logoexpand",
                   "options": {
-                      "name": "Widget.mapsLinkTextLabel",
-                      "tooltip": "Widget.mapsLinkTextTooltip"
-                  }
-              }
+                        "tooltip": "Widget.mapsLinkTextTooltip",
+                        "name": "Widget.itemListCaptionLabel",
+                        "listBoxValues": [
+                            {
+                                "value": "logoexpand",
+                                "caption": "Widget.logoMore",
+                                "position": 0
+                            },
+                            {
+                                "value": "logotext",
+                                "caption": "Widget.logotext",
+                                "position": 1
+                            },
+                            {
+                                "value": "text",
+                                "caption": "Widget.text",
+                                "position": 2
+                            },
+                            {
+                                "value": "textexpand",
+                                "caption": "Widget.textexpand",
+                                "position": 3
+                            }
+                        ]
+                    }
+                }
+             
         }
     }
 ]

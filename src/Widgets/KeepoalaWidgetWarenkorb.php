@@ -2,9 +2,12 @@
 
 namespace KeepoalaWidget2\Widgets;
 
+use IO\Helper\Utils;
 use Ceres\Widgets\Helper\BaseWidget;
 use IO\Services\Order\Factories\OrderResultFactory;
 use Ceres\Config\CeresHeaderConfig;
+use Ceres\Widgets\Helper\Factories\WidgetSettingsFactory;
+use Ceres\Widgets\Helper\Factories\WidgetDataFactory;
 
 class KeepoalaWidgetWarenkorb extends BaseWidget
 {
@@ -26,9 +29,11 @@ class KeepoalaWidgetWarenkorb extends BaseWidget
 
         return [
             'data' => $order,
+            'lang' => Utils::getlang(),
             'totals' => $order['totals'],
             'shopname' => $company_name,
             'keepoalaID' => $keepoalaID,
+            'setting' =>  $widgetSettings,
             'showAdditionalPaymentInformation' => true
         ];
     }
@@ -45,9 +50,11 @@ class KeepoalaWidgetWarenkorb extends BaseWidget
         $keepoalaID = substr(md5($company_name), 0, 4) . '-' . md5($order->id);
         return [
             'data' => $order,
+            'lang' => Utils::getlang(),
             'totals' => $order['totals'],
             'shopname' => $company_name,
             'keepoalaID' => $keepoalaID,
+            'setting' =>  $widgetSettings,
             'showAdditionalPaymentInformation' => true
         ];
     }
